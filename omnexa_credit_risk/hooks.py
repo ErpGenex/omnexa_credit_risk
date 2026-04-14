@@ -1,5 +1,5 @@
 app_name = "omnexa_credit_risk"
-app_title = "Omnexa Credit Risk"
+app_title = "ErpGenEx — Credit Risk"
 app_publisher = "Omnexa"
 app_description = "Credit risk and ORR vertical"
 app_email = "dev@omnexa.com"
