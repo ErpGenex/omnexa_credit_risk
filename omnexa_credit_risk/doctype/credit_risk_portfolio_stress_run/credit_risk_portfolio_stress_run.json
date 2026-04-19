@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-04-17 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "run_name",
+  "valuation_date",
+  "scenario_payload",
+  "input_hash",
+  "base_total_ecl",
+  "stressed_total_ecl",
+  "base_total_provision",
+  "stressed_total_provision",
+  "result_json"
+ ],
+ "fields": [
+  {"fieldname":"run_name","fieldtype":"Data","label":"Run Name","reqd":1},
+  {"fieldname":"valuation_date","fieldtype":"Date","label":"Valuation Date","reqd":1},
+  {"fieldname":"scenario_payload","fieldtype":"Long Text","label":"Scenario Payload","reqd":1},
+  {"fieldname":"input_hash","fieldtype":"Data","label":"Input Hash"},
+  {"fieldname":"base_total_ecl","fieldtype":"Currency","label":"Base Total ECL"},
+  {"fieldname":"stressed_total_ecl","fieldtype":"Currency","label":"Stressed Total ECL"},
+  {"fieldname":"base_total_provision","fieldtype":"Currency","label":"Base Total Provision"},
+  {"fieldname":"stressed_total_provision","fieldtype":"Currency","label":"Stressed Total Provision"},
+  {"fieldname":"result_json","fieldtype":"Long Text","label":"Result JSON","reqd":1}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-17 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Risk",
+ "name": "Credit Risk Portfolio Stress Run",
+ "owner": "Administrator",
+ "permissions": [
+  {"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+

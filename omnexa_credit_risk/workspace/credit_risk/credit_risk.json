@@ -1,0 +1,355 @@
+{
+ "charts": [
+  {
+   "chart_name": "CreditRisk · Credit Risk Account Snapshot Trend",
+   "label": "Credit Risk Account Snapshot Trend"
+  },
+  {
+   "chart_name": "CreditRisk · Credit Risk Portfolio Stress Trend",
+   "label": "Credit Risk Portfolio Stress Trend"
+  },
+  {
+   "chart_name": "CreditRisk · Credit Risk Account Snap Vol",
+   "label": "Credit Risk Account Snap Vol"
+  },
+  {
+   "chart_name": "CreditRisk · ECL stage bars Bar",
+   "label": "ECL stage bars Bar"
+  },
+  {
+   "chart_name": "CreditRisk · Segments Pie",
+   "label": "Segments Pie"
+  },
+  {
+   "chart_name": "CreditRisk · Calibration methods Perc",
+   "label": "Calibration methods Perc"
+  },
+  {
+   "chart_name": "CreditRisk · Credit Risk Calibration  Mix",
+   "label": "Credit Risk Calibration  Mix"
+  }
+ ],
+ "content": "[{\"id\": \"credit-risk-h\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Credit Risk</b></span>\", \"col\": 12}}, {\"id\": \"credit-risk-nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Account Snapshots\", \"col\": 4}}, {\"id\": \"credit-risk-nc1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Stress Runs\", \"col\": 4}}, {\"id\": \"credit-risk-nc2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Model Validations\", \"col\": 4}}, {\"id\": \"credit-risk-nc3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Backtest Datasets\", \"col\": 4}}, {\"id\": \"credit-risk-nc4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Calibration Runs\", \"col\": 4}}, {\"id\": \"credit-risk-nc5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"ECL Movements\", \"col\": 4}}, {\"id\": \"credit-risk-ch0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Risk Account Snapshot Trend\", \"col\": 4}}, {\"id\": \"credit-risk-ch1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Risk Portfolio Stress Trend\", \"col\": 4}}, {\"id\": \"credit-risk-ch2\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Risk Account Snap Vol\", \"col\": 4}}, {\"id\": \"credit-risk-ch3\", \"type\": \"chart\", \"data\": {\"chart_name\": \"ECL stage bars Bar\", \"col\": 4}}, {\"id\": \"credit-risk-ch4\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Segments Pie\", \"col\": 4}}, {\"id\": \"credit-risk-ch5\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Calibration methods Perc\", \"col\": 4}}, {\"id\": \"credit-risk-ch6\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Credit Risk Calibration  Mix\", \"col\": 4}}, {\"id\": \"credit-risk-ops\", \"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"id\": \"credit-risk-sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Account Snapshots\", \"col\": 3}}, {\"id\": \"credit-risk-sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stress Runs\", \"col\": 3}}, {\"id\": \"credit-risk-sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Backtest Datasets\", \"col\": 3}}, {\"id\": \"credit-risk-sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Calibration Runs\", \"col\": 3}}, {\"id\": \"credit-risk-sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"ECL Movements\", \"col\": 3}}, {\"id\": \"credit-risk-sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Model Validations\", \"col\": 3}}, {\"id\": \"credit-risk-sc6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Governance Overview\", \"col\": 3}}]",
+ "creation": "2026-04-17 15:51:34.414391",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "quality",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Credit Risk",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer & KYC",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "user",
+   "is_query_report": 0,
+   "label": "Customer Profile",
+   "link_count": 0,
+   "link_to": "Customer Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "users",
+   "is_query_report": 0,
+   "label": "Contact",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "map-pin",
+   "is_query_report": 0,
+   "label": "Address",
+   "link_count": 0,
+   "link_to": "Address",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Origination & Product Setup",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "calendar",
+   "is_query_report": 0,
+   "label": "Fiscal Year",
+   "link_count": 0,
+   "link_to": "Fiscal Year",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "globe",
+   "is_query_report": 0,
+   "label": "Currency Exchange Rate",
+   "link_count": 0,
+   "link_to": "Currency Exchange Rate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "credit-card",
+   "is_query_report": 0,
+   "label": "Mode of Payment",
+   "link_count": 0,
+   "link_to": "Mode of Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contracting, Disbursement & Servicing",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "file-text",
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "dollar-sign",
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "book-open",
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "briefcase",
+   "is_query_report": 0,
+   "label": "Bank Account",
+   "link_count": 0,
+   "link_to": "Bank Account",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "target",
+   "is_query_report": 0,
+   "label": "Cost Center",
+   "link_count": 0,
+   "link_to": "Cost Center",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk, Governance & Compliance",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "book",
+   "is_query_report": 1,
+   "label": "General Ledger",
+   "link_count": 0,
+   "link_to": "General Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "list",
+   "is_query_report": 1,
+   "label": "Trial Balance",
+   "link_count": 0,
+   "link_to": "Trial Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "shield",
+   "is_query_report": 0,
+   "label": "Policy Versions",
+   "link_count": 0,
+   "link_to": "Credit Risk Policy Version",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "activity",
+   "is_query_report": 0,
+   "label": "Audit Snapshots",
+   "link_count": 0,
+   "link_to": "Credit Risk Audit Snapshot",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "IFRS9 & Stress Analytics",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "icon": "shield",
+   "is_query_report": 1,
+   "label": "Governance Overview",
+   "link_count": 0,
+   "link_to": "Governance Overview",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-17 23:45:44.802079",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Risk",
+ "name": "Credit Risk",
+ "number_cards": [
+  {
+   "label": "Account Snapshots",
+   "number_card_name": "Account Snapshots"
+  },
+  {
+   "label": "Stress Runs",
+   "number_card_name": "Stress Runs"
+  },
+  {
+   "label": "Model Validations",
+   "number_card_name": "Model Validations"
+  },
+  {
+   "label": "Backtest Datasets",
+   "number_card_name": "Backtest Datasets"
+  },
+  {
+   "label": "Calibration Runs",
+   "number_card_name": "Calibration Runs"
+  },
+  {
+   "label": "ECL Movements",
+   "number_card_name": "ECL Movements"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Finance Group",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Account Snapshots",
+   "link_to": "Credit Risk Account Snapshot",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Stress Runs",
+   "link_to": "Credit Risk Portfolio Stress Run",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Backtest Datasets",
+   "link_to": "Credit Risk Backtest Dataset",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Calibration Runs",
+   "link_to": "Credit Risk Calibration Run",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "ECL Movements",
+   "link_to": "Credit Risk ECL Movement",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Model Validations",
+   "link_to": "Credit Risk Model Validation Run",
+   "type": "DocType"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "",
+   "label": "Governance Overview",
+   "link_to": "Governance Overview",
+   "report_ref_doctype": "Finance Policy Version",
+   "type": "Report"
+  }
+ ],
+ "title": "Credit Risk"
+}

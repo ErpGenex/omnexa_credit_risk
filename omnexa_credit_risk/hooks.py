@@ -247,3 +247,18 @@ before_request = ["omnexa_credit_risk.license_gate.before_request"]
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+after_migrate = [
+	"omnexa_credit_risk.governance_setup.after_migrate",
+	"omnexa_credit_risk.workspace_enhancer.after_migrate",
+]
+
+permission_query_conditions = {
+	"Credit Risk Policy Version": "omnexa_credit_risk.governance_permissions.policy_query_conditions",
+	"Credit Risk Audit Snapshot": "omnexa_credit_risk.governance_permissions.snapshot_query_conditions",
+}
+
+has_permission = {
+	"Credit Risk Policy Version": "omnexa_credit_risk.governance_permissions.policy_has_permission",
+	"Credit Risk Audit Snapshot": "omnexa_credit_risk.governance_permissions.snapshot_has_permission",
+}
