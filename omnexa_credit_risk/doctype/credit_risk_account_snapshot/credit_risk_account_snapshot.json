@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "account_id",
   "segment",
   "country_code",
@@ -18,23 +19,109 @@
   "ecl",
   "provision_rate",
   "provision_amount",
-  "source_decision_case"
+  "source_decision_case",
+  "control_section",
+  "snapshot_reference"
  ],
  "fields": [
-  {"fieldname":"account_id","fieldtype":"Data","label":"Account ID","reqd":1},
-  {"fieldname":"segment","fieldtype":"Data","label":"Segment","reqd":1},
-  {"fieldname":"country_code","fieldtype":"Data","label":"Country Code"},
-  {"fieldname":"product_code","fieldtype":"Data","label":"Product Code"},
-  {"fieldname":"snapshot_date","fieldtype":"Date","label":"Snapshot Date","reqd":1},
-  {"fieldname":"ifrs9_stage","fieldtype":"Select","label":"IFRS9 Stage","options":"STAGE_1\nSTAGE_2\nSTAGE_3","reqd":1},
-  {"fieldname":"pd","fieldtype":"Percent","label":"PD","reqd":1},
-  {"fieldname":"lgd","fieldtype":"Percent","label":"LGD","reqd":1},
-  {"fieldname":"ead","fieldtype":"Currency","label":"EAD","reqd":1},
-  {"fieldname":"ecl","fieldtype":"Currency","label":"ECL","reqd":1},
-  {"fieldname":"provision_rate","fieldtype":"Percent","label":"Provision Rate","reqd":1},
-  {"fieldname":"provision_amount","fieldtype":"Currency","label":"Provision Amount","reqd":1},
-  {"fieldname":"source_decision_case","fieldtype":"Dynamic Link","label":"Source Decision Case","options":"source_decision_doctype"},
-  {"fieldname":"source_decision_doctype","fieldtype":"Data","label":"Source Decision DocType","hidden":1}
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Account Snapshot Identity"
+  },
+  {
+   "fieldname": "account_id",
+   "fieldtype": "Data",
+   "label": "Account ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "segment",
+   "fieldtype": "Data",
+   "label": "Segment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code"
+  },
+  {
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code"
+  },
+  {
+   "fieldname": "snapshot_date",
+   "fieldtype": "Date",
+   "label": "Snapshot Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ifrs9_stage",
+   "fieldtype": "Select",
+   "label": "IFRS9 Stage",
+   "options": "STAGE_1\nSTAGE_2\nSTAGE_3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pd",
+   "fieldtype": "Percent",
+   "label": "PD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lgd",
+   "fieldtype": "Percent",
+   "label": "LGD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ead",
+   "fieldtype": "Currency",
+   "label": "EAD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ecl",
+   "fieldtype": "Currency",
+   "label": "ECL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provision_rate",
+   "fieldtype": "Percent",
+   "label": "Provision Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provision_amount",
+   "fieldtype": "Currency",
+   "label": "Provision Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_decision_case",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Decision Case",
+   "options": "source_decision_doctype"
+  },
+  {
+   "fieldname": "source_decision_doctype",
+   "fieldtype": "Data",
+   "label": "Source Decision DocType",
+   "hidden": 1
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "snapshot_reference",
+   "fieldtype": "Data",
+   "label": "Snapshot Reference"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -44,10 +131,20 @@
  "name": "Credit Risk Account Snapshot",
  "owner": "Administrator",
  "permissions": [
-  {"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
 }
-
