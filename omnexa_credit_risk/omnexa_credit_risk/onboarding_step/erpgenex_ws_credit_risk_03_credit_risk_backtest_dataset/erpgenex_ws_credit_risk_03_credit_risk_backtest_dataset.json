@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create",
+ "creation": "2026-04-20 00:31:40.313429",
+ "description": "Create or review your first **Credit Risk Backtest Dataset** record from this workspace.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-04-20 02:24:44.961546",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_risk-03-credit_risk_backtest_dataset",
+ "owner": "Administrator",
+ "reference_document": "Credit Risk Backtest Dataset",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Get started with Credit Risk Backtest Dataset",
+ "validate_action": 1
+}

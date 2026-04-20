@@ -1,0 +1,41 @@
+{
+ "allow_roles": [
+  {
+   "role": "Desk User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-04-20 00:31:40.328490",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://frappe.io/framework",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-04-20 02:24:44.987173",
+ "modified_by": "Administrator",
+ "module": "Omnexa Credit Risk",
+ "name": "ERPGENEX \u2014 Credit Risk",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "ERPGENEX-WS-credit_risk-01-credit_risk_account_snapshot"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_risk-02-credit_risk_portfolio_stress_run"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_risk-03-credit_risk_backtest_dataset"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_risk-04-credit_risk_calibration_run"
+  },
+  {
+   "step": "ERPGENEX-WS-credit_risk-home"
+  }
+ ],
+ "subtitle": "Guided setup for this workspace.",
+ "success_message": "You are ready to work in Credit Risk.",
+ "title": "ERPGENEX \u00b7 Credit Risk"
+}
