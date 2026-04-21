@@ -1,96 +1,84 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "hash",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "period_label",
-  "period_start",
-  "period_end",
-  "opening_total_ecl",
-  "closing_total_ecl",
-  "net_movement",
-  "bridge_json",
-  "control_section",
-  "movement_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "ECL Movement Identity"
-  },
-  {
-   "fieldname": "period_label",
-   "fieldtype": "Data",
-   "label": "Period Label",
-   "reqd": 1,
-   "in_list_view": 1
-  },
-  {
-   "fieldname": "period_start",
-   "fieldtype": "Date",
-   "label": "Period Start",
-   "reqd": 1
-  },
-  {
-   "fieldname": "period_end",
-   "fieldtype": "Date",
-   "label": "Period End",
-   "reqd": 1
-  },
-  {
-   "fieldname": "opening_total_ecl",
-   "fieldtype": "Data",
-   "label": "Opening Total ECL"
-  },
-  {
-   "fieldname": "closing_total_ecl",
-   "fieldtype": "Data",
-   "label": "Closing Total ECL"
-  },
-  {
-   "fieldname": "net_movement",
-   "fieldtype": "Data",
-   "label": "Net Movement"
-  },
-  {
-   "fieldname": "bridge_json",
-   "fieldtype": "Long Text",
-   "label": "Bridge JSON",
-   "reqd": 1
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "movement_reference",
-   "fieldtype": "Data",
-   "label": "Movement Reference"
-  }
- ],
- "index_web_pages_for_search": 1,
- "module": "Omnexa Credit Risk",
- "name": "Credit Risk ECL Movement",
- "permissions": [
-  {
-   "role": "System Manager",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "delete": 1,
-   "print": 1,
-   "email": 1,
-   "export": 1,
-   "report": 1,
-   "share": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "hash",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"period_label",
+		"period_start",
+		"period_end",
+		"opening_total_ecl",
+		"closing_total_ecl",
+		"net_movement",
+		"bridge_json",
+		"movement_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "period_label",
+			"fieldtype": "Data",
+			"label": "Period Label",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "period_start",
+			"fieldtype": "Date",
+			"label": "Period Start",
+			"reqd": 1
+		},
+		{
+			"fieldname": "period_end",
+			"fieldtype": "Date",
+			"label": "Period End",
+			"reqd": 1
+		},
+		{
+			"fieldname": "opening_total_ecl",
+			"fieldtype": "Data",
+			"label": "Opening Total ECL"
+		},
+		{
+			"fieldname": "closing_total_ecl",
+			"fieldtype": "Data",
+			"label": "Closing Total ECL"
+		},
+		{
+			"fieldname": "net_movement",
+			"fieldtype": "Data",
+			"label": "Net Movement"
+		},
+		{
+			"fieldname": "bridge_json",
+			"fieldtype": "Long Text",
+			"label": "Bridge JSON",
+			"reqd": 1
+		},
+		{
+			"fieldname": "movement_reference",
+			"fieldtype": "Data",
+			"label": "Movement Reference"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"module": "Omnexa Credit Risk",
+	"name": "Credit Risk ECL Movement",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"print": 1,
+			"email": 1,
+			"export": 1,
+			"report": 1,
+			"share": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"track_changes": 1
 }

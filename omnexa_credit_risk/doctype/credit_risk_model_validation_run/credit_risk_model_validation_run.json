@@ -1,117 +1,105 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "hash",
- "creation": "2026-04-17 18:00:00.000000",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "model_name",
-  "validation_date",
-  "dataset_ref",
-  "total_accounts",
-  "observed_default_rate",
-  "average_predicted_pd",
-  "brier_score",
-  "accuracy_band",
-  "threshold_breaches_json",
-  "control_section",
-  "validation_owner"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Validation Run Identity"
-  },
-  {
-   "fieldname": "model_name",
-   "fieldtype": "Data",
-   "label": "Model Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "validation_date",
-   "fieldtype": "Date",
-   "label": "Validation Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "dataset_ref",
-   "fieldtype": "Data",
-   "label": "Dataset Ref"
-  },
-  {
-   "fieldname": "total_accounts",
-   "fieldtype": "Int",
-   "label": "Total Accounts",
-   "reqd": 1
-  },
-  {
-   "fieldname": "observed_default_rate",
-   "fieldtype": "Percent",
-   "label": "Observed Default Rate",
-   "reqd": 1
-  },
-  {
-   "fieldname": "average_predicted_pd",
-   "fieldtype": "Percent",
-   "label": "Average Predicted PD",
-   "reqd": 1
-  },
-  {
-   "fieldname": "brier_score",
-   "fieldtype": "Float",
-   "label": "Brier Score",
-   "reqd": 1
-  },
-  {
-   "fieldname": "accuracy_band",
-   "fieldtype": "Select",
-   "label": "Accuracy Band",
-   "options": "STRONG\nACCEPTABLE\nWEAK",
-   "reqd": 1
-  },
-  {
-   "fieldname": "threshold_breaches_json",
-   "fieldtype": "Long Text",
-   "label": "Threshold Breaches JSON"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Governance"
-  },
-  {
-   "fieldname": "validation_owner",
-   "fieldtype": "Link",
-   "label": "Validation Owner",
-   "options": "User"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-17 18:00:00.000000",
- "modified_by": "Administrator",
- "module": "Omnexa Credit Risk",
- "name": "Credit Risk Model Validation Run",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "hash",
+	"creation": "2026-04-17 18:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"model_name",
+		"validation_date",
+		"dataset_ref",
+		"total_accounts",
+		"observed_default_rate",
+		"average_predicted_pd",
+		"brier_score",
+		"accuracy_band",
+		"threshold_breaches_json",
+		"validation_owner"
+	],
+	"fields": [
+		{
+			"fieldname": "model_name",
+			"fieldtype": "Data",
+			"label": "Model Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "validation_date",
+			"fieldtype": "Date",
+			"label": "Validation Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "dataset_ref",
+			"fieldtype": "Data",
+			"label": "Dataset Ref"
+		},
+		{
+			"fieldname": "total_accounts",
+			"fieldtype": "Int",
+			"label": "Total Accounts",
+			"reqd": 1
+		},
+		{
+			"fieldname": "observed_default_rate",
+			"fieldtype": "Percent",
+			"label": "Observed Default Rate",
+			"reqd": 1
+		},
+		{
+			"fieldname": "average_predicted_pd",
+			"fieldtype": "Percent",
+			"label": "Average Predicted PD",
+			"reqd": 1
+		},
+		{
+			"fieldname": "brier_score",
+			"fieldtype": "Float",
+			"label": "Brier Score",
+			"reqd": 1
+		},
+		{
+			"fieldname": "accuracy_band",
+			"fieldtype": "Select",
+			"label": "Accuracy Band",
+			"options": "STRONG\nACCEPTABLE\nWEAK",
+			"reqd": 1
+		},
+		{
+			"fieldname": "threshold_breaches_json",
+			"fieldtype": "Long Text",
+			"label": "Threshold Breaches JSON"
+		},
+		{
+			"fieldname": "validation_owner",
+			"fieldtype": "Link",
+			"label": "Validation Owner",
+			"options": "User"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-04-17 18:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Credit Risk",
+	"name": "Credit Risk Model Validation Run",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
 }

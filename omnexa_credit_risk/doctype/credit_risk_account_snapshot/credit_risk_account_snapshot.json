@@ -1,150 +1,148 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "hash",
- "creation": "2026-04-17 18:00:00.000000",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "account_id",
-  "segment",
-  "country_code",
-  "product_code",
-  "snapshot_date",
-  "ifrs9_stage",
-  "pd",
-  "lgd",
-  "ead",
-  "ecl",
-  "provision_rate",
-  "provision_amount",
-  "source_decision_case",
-  "control_section",
-  "snapshot_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Account Snapshot Identity"
-  },
-  {
-   "fieldname": "account_id",
-   "fieldtype": "Data",
-   "label": "Account ID",
-   "reqd": 1
-  },
-  {
-   "fieldname": "segment",
-   "fieldtype": "Data",
-   "label": "Segment",
-   "reqd": 1
-  },
-  {
-   "fieldname": "country_code",
-   "fieldtype": "Data",
-   "label": "Country Code"
-  },
-  {
-   "fieldname": "product_code",
-   "fieldtype": "Data",
-   "label": "Product Code"
-  },
-  {
-   "fieldname": "snapshot_date",
-   "fieldtype": "Date",
-   "label": "Snapshot Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "ifrs9_stage",
-   "fieldtype": "Select",
-   "label": "IFRS9 Stage",
-   "options": "STAGE_1\nSTAGE_2\nSTAGE_3",
-   "reqd": 1
-  },
-  {
-   "fieldname": "pd",
-   "fieldtype": "Percent",
-   "label": "PD",
-   "reqd": 1
-  },
-  {
-   "fieldname": "lgd",
-   "fieldtype": "Percent",
-   "label": "LGD",
-   "reqd": 1
-  },
-  {
-   "fieldname": "ead",
-   "fieldtype": "Currency",
-   "label": "EAD",
-   "reqd": 1
-  },
-  {
-   "fieldname": "ecl",
-   "fieldtype": "Currency",
-   "label": "ECL",
-   "reqd": 1
-  },
-  {
-   "fieldname": "provision_rate",
-   "fieldtype": "Percent",
-   "label": "Provision Rate",
-   "reqd": 1
-  },
-  {
-   "fieldname": "provision_amount",
-   "fieldtype": "Currency",
-   "label": "Provision Amount",
-   "reqd": 1
-  },
-  {
-   "fieldname": "source_decision_case",
-   "fieldtype": "Dynamic Link",
-   "label": "Source Decision Case",
-   "options": "source_decision_doctype"
-  },
-  {
-   "fieldname": "source_decision_doctype",
-   "fieldtype": "Data",
-   "label": "Source Decision DocType",
-   "hidden": 1
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "snapshot_reference",
-   "fieldtype": "Data",
-   "label": "Snapshot Reference"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-17 18:00:00.000000",
- "modified_by": "Administrator",
- "module": "Omnexa Credit Risk",
- "name": "Credit Risk Account Snapshot",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "hash",
+	"creation": "2026-04-17 18:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"account_id",
+		"segment",
+		"country_code",
+		"product_code",
+		"column_break_omnexa_1",
+		"snapshot_date",
+		"ifrs9_stage",
+		"pd",
+		"lgd",
+		"ead",
+		"column_break_omnexa_2",
+		"ecl",
+		"provision_rate",
+		"provision_amount",
+		"source_decision_case",
+		"snapshot_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "account_id",
+			"fieldtype": "Data",
+			"label": "Account ID",
+			"reqd": 1
+		},
+		{
+			"fieldname": "segment",
+			"fieldtype": "Data",
+			"label": "Segment",
+			"reqd": 1
+		},
+		{
+			"fieldname": "country_code",
+			"fieldtype": "Data",
+			"label": "Country Code"
+		},
+		{
+			"fieldname": "product_code",
+			"fieldtype": "Data",
+			"label": "Product Code"
+		},
+		{
+			"fieldname": "snapshot_date",
+			"fieldtype": "Date",
+			"label": "Snapshot Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "ifrs9_stage",
+			"fieldtype": "Select",
+			"label": "IFRS9 Stage",
+			"options": "STAGE_1\nSTAGE_2\nSTAGE_3",
+			"reqd": 1
+		},
+		{
+			"fieldname": "pd",
+			"fieldtype": "Percent",
+			"label": "PD",
+			"reqd": 1
+		},
+		{
+			"fieldname": "lgd",
+			"fieldtype": "Percent",
+			"label": "LGD",
+			"reqd": 1
+		},
+		{
+			"fieldname": "ead",
+			"fieldtype": "Currency",
+			"label": "EAD",
+			"reqd": 1
+		},
+		{
+			"fieldname": "ecl",
+			"fieldtype": "Currency",
+			"label": "ECL",
+			"reqd": 1
+		},
+		{
+			"fieldname": "provision_rate",
+			"fieldtype": "Percent",
+			"label": "Provision Rate",
+			"reqd": 1
+		},
+		{
+			"fieldname": "provision_amount",
+			"fieldtype": "Currency",
+			"label": "Provision Amount",
+			"reqd": 1
+		},
+		{
+			"fieldname": "source_decision_case",
+			"fieldtype": "Dynamic Link",
+			"label": "Source Decision Case",
+			"options": "source_decision_doctype"
+		},
+		{
+			"fieldname": "source_decision_doctype",
+			"fieldtype": "Data",
+			"label": "Source Decision DocType",
+			"hidden": 1
+		},
+		{
+			"fieldname": "snapshot_reference",
+			"fieldtype": "Data",
+			"label": "Snapshot Reference"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "column_break_omnexa_2",
+			"fieldtype": "Column Break"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-04-17 18:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Credit Risk",
+	"name": "Credit Risk Account Snapshot",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
 }
