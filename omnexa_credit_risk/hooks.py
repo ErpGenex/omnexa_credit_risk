@@ -1,8 +1,8 @@
 app_name = "omnexa_credit_risk"
 app_title = "ErpGenEx — Credit Risk"
-app_publisher = "Omnexa"
+app_publisher = "ErpGenEx"
 app_description = "Credit risk and ORR vertical"
-app_email = "dev@omnexa.com"
+app_email = "dev@erpgenex.com"
 app_license = "mit"
 
 # Apps
