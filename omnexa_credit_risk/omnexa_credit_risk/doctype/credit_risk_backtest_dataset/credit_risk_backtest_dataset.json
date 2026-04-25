@@ -1,0 +1,127 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:dataset_code",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"dataset_code",
+		"title",
+		"segment",
+		"column_break_omnexa_1",
+		"manifest_json",
+		"champion_model_version",
+		"challenger_model_version",
+		"workflow_status",
+		"promotion_submitted_by",
+		"column_break_omnexa_2",
+		"promotion_submitted_on",
+		"promotion_approved_by",
+		"promotion_approved_on",
+		"dataset_owner"
+	],
+	"fields": [
+		{
+			"fieldname": "dataset_code",
+			"fieldtype": "Data",
+			"label": "Dataset Code",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "title",
+			"fieldtype": "Data",
+			"label": "Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "segment",
+			"fieldtype": "Data",
+			"label": "Segment",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "manifest_json",
+			"fieldtype": "Long Text",
+			"label": "Manifest JSON",
+			"reqd": 1
+		},
+		{
+			"fieldname": "champion_model_version",
+			"fieldtype": "Data",
+			"label": "Champion Model Version",
+			"reqd": 1
+		},
+		{
+			"fieldname": "challenger_model_version",
+			"fieldtype": "Data",
+			"label": "Challenger Model Version"
+		},
+		{
+			"fieldname": "workflow_status",
+			"fieldtype": "Select",
+			"label": "Workflow Status",
+			"options": "DISCOVERY\nCHALLENGER_PENDING_APPROVAL\nCHALLENGER_ACTIVE",
+			"default": "DISCOVERY",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "promotion_submitted_by",
+			"fieldtype": "Link",
+			"label": "Promotion Submitted By",
+			"options": "User"
+		},
+		{
+			"fieldname": "promotion_submitted_on",
+			"fieldtype": "Datetime",
+			"label": "Promotion Submitted On"
+		},
+		{
+			"fieldname": "promotion_approved_by",
+			"fieldtype": "Link",
+			"label": "Promotion Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "promotion_approved_on",
+			"fieldtype": "Datetime",
+			"label": "Promotion Approved On"
+		},
+		{
+			"fieldname": "dataset_owner",
+			"fieldtype": "Link",
+			"label": "Dataset Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "column_break_omnexa_2",
+			"fieldtype": "Column Break"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"module": "Omnexa Credit Risk",
+	"name": "Credit Risk Backtest Dataset",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"print": 1,
+			"email": 1,
+			"export": 1,
+			"report": 1,
+			"share": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"track_changes": 1
+}
