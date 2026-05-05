@@ -5,6 +5,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"dataset_code",
 		"title",
 		"segment",
@@ -12,6 +13,7 @@
 		"manifest_json",
 		"champion_model_version",
 		"challenger_model_version",
+		"tab_break_details",
 		"workflow_status",
 		"promotion_submitted_by",
 		"column_break_omnexa_2",
@@ -21,6 +23,16 @@
 		"dataset_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "dataset_code",
 			"fieldtype": "Data",
