@@ -6,11 +6,13 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"run_name",
 		"valuation_date",
 		"scenario_payload",
 		"input_hash",
 		"base_total_ecl",
+		"tab_break_details",
 		"stressed_total_ecl",
 		"base_total_provision",
 		"stressed_total_provision",
@@ -18,6 +20,16 @@
 		"scenario_reference"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "run_name",
 			"fieldtype": "Data",
@@ -75,7 +87,7 @@
 	],
 	"index_web_pages_for_search": 1,
 	"links": [],
-	"modified": "2026-04-17 18:00:00.000000",
+	"modified": "2026-05-07 12:00:00",
 	"modified_by": "Administrator",
 	"module": "Omnexa Credit Risk",
 	"name": "Credit Risk Portfolio Stress Run",
