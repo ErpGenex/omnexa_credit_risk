@@ -54,6 +54,43 @@ def _ensure_chart(name: str, chart_type: str, document_type: str, chart_render_t
 	doc.insert(ignore_permissions=True)
 
 
+def _prune_invalid_workspace_references(ws):
+	"""Drop child rows and content blocks that point to deleted Number Cards / Charts / DocTypes.
+
+	Migrate may remove DocTypes (e.g. SME stack) while Workspace rows still reference their KPIs;
+	without pruning, ``save`` raises LinkValidationError.
+	"""
+	for row in list(ws.get("number_cards") or []):
+		name = getattr(row, "number_card_name", None) or (row or {}).get("number_card_name")
+		if name and not frappe.db.exists("Number Card", name):
+			ws.remove(row)
+
+	for row in list(ws.get("charts") or []):
+		ch = getattr(row, "chart_name", None) or (row or {}).get("chart_name")
+		if ch and not frappe.db.exists("Dashboard Chart", ch):
+			ws.remove(row)
+
+	for row in list(ws.get("links") or []):
+		if getattr(row, "link_type", None) == "DocType" or (row or {}).get("link_type") == "DocType":
+			lt = getattr(row, "link_to", None) or (row or {}).get("link_to")
+			if lt and not frappe.db.exists("DocType", lt):
+				ws.remove(row)
+
+	try:
+		blocks = json.loads(ws.content or "[]")
+	except Exception:
+		blocks = []
+	if isinstance(blocks, list):
+		filtered = []
+		for b in blocks:
+			if (b or {}).get("type") == "chart":
+				cn = (((b or {}).get("data") or {}).get("chart_name") or "").strip()
+				if cn and not frappe.db.exists("Dashboard Chart", cn):
+					continue
+			filtered.append(b)
+		ws.content = json.dumps(filtered)
+
+
 def _ensure_workspace():
 	ws = None
 	if frappe.db.exists("Workspace", WORKSPACE):
@@ -91,4 +128,5 @@ def _ensure_workspace():
 	if not any(c.get("chart_name") == CHART_SNP for c in ws.charts):
 		ws.append("charts", {"chart_name": CHART_SNP, "label": "Snapshots (Last Month)"})
 
+	_prune_invalid_workspace_references(ws)
 	ws.save(ignore_permissions=True)
