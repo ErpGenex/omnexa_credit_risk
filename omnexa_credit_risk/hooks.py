@@ -15,7 +15,7 @@ add_to_apps_screen = [
 		"name": "omnexa_credit_risk",
 		"logo": "/assets/omnexa_credit_risk/logo.png",
 		"title": "RiskGuard",
-		"route": "/app/credit_risk",
+		"route": "/app/rk-servicing-portal",
 		"has_permission": "omnexa_core.omnexa_core.finance_demo.finance_app_permission.has_app_permission",
 	}
 ]
