@@ -12,5 +12,5 @@ def get_standards_profile() -> dict:
 		"activity_controls": ['pd-lgd-ead', 'stress-testing', 'portfolio-risk-aggregation', 'basel-capital'],
 		"multi_country_ready": True,
 		"auditability": "high",
-		"api_contract_version": "v1",
+		"api_contract_version": "v1"
 	}

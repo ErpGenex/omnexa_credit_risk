@@ -25,10 +25,11 @@ class TestCreditRiskWave3(FrappeTestCase):
 				"email": email,
 				"first_name": "Checker",
 				"send_welcome_email": 0,
-				"enabled": 1,
-			}
+				"enabled": 1
+	}
 		)
-		doc.append("roles", {"role": "System Manager"})
+		doc.append("roles", {"role": "System Manager"
+	})
 		doc.insert(ignore_permissions=True)
 
 	def test_backtest_challenger_calibration_and_ecl_bridge(self):
@@ -37,7 +38,8 @@ class TestCreditRiskWave3(FrappeTestCase):
 			dataset_code=dcode,
 			title="Q1 retail",
 			segment="RETAIL",
-			manifest_json=json.dumps({"rows": 1000}),
+			manifest_json=json.dumps({"rows": 1000
+	}),
 			champion_model_version="v1",
 			challenger_model_version="v2",
 		)
@@ -54,20 +56,28 @@ class TestCreditRiskWave3(FrappeTestCase):
 		cal = persist_credit_risk_calibration_run(
 			segment="RETAIL",
 			horizon_months=36,
-			pd_term_json=json.dumps({"1m": "0.01", "12m": "0.04"}),
-			lgd_term_json=json.dumps({"base": "0.45"}),
-			ead_term_json=json.dumps({"base": "1.0"}),
+			pd_term_json=json.dumps({"1m": "0.01", "12m": "0.04"
+	}),
+			lgd_term_json=json.dumps({"base": "0.45"
+	}),
+			ead_term_json=json.dumps({"base": "1.0"
+	}),
 		)
 		self.assertTrue(cal.get("name"))
 
 		opening = [
-			{"account_id": "a1", "ecl": "1000", "stage": "STAGE_1"},
-			{"account_id": "a2", "ecl": "500", "stage": "STAGE_1"},
+			{"account_id": "a1", "ecl": "1000", "stage": "STAGE_1"
+	},
+			{"account_id": "a2", "ecl": "500", "stage": "STAGE_1"
+	},
 		]
 		closing = [
-			{"account_id": "a1", "ecl": "1200", "stage": "STAGE_2"},
-			{"account_id": "a2", "ecl": "500", "stage": "STAGE_1"},
-			{"account_id": "a3", "ecl": "300", "stage": "STAGE_1"},
+			{"account_id": "a1", "ecl": "1200", "stage": "STAGE_2"
+	},
+			{"account_id": "a2", "ecl": "500", "stage": "STAGE_1"
+	},
+			{"account_id": "a3", "ecl": "300", "stage": "STAGE_1"
+	},
 		]
 		bridge = compute_ecl_attribution_bridge(json.dumps(opening), json.dumps(closing))
 		self.assertIn("attribution", bridge)

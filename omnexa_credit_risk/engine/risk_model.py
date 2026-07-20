@@ -140,13 +140,12 @@ def aggregate_portfolio_view(results: list[AccountRiskResult]) -> dict:
 	stage_breakdown = {
 		"STAGE_1": sum((r.provision_amount for r in results if r.stage == "STAGE_1"), Decimal("0")),
 		"STAGE_2": sum((r.provision_amount for r in results if r.stage == "STAGE_2"), Decimal("0")),
-		"STAGE_3": sum((r.provision_amount for r in results if r.stage == "STAGE_3"), Decimal("0")),
-	}
+		"STAGE_3": sum((r.provision_amount for r in results if r.stage == "STAGE_3"), Decimal("0"))}
 	return {
 		"accounts_count": len(results),
 		"total_ecl": total_ecl,
 		"total_provision": total_provision,
-		"stage_breakdown": stage_breakdown,
+		"stage_breakdown": stage_breakdown
 	}
 
 

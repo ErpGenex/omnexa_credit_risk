@@ -56,11 +56,10 @@ def evaluate_portfolio_expected_loss(exposures: list[dict], scenario: dict | Non
 				"pd": str(p.pd),
 				"lgd": str(p.lgd),
 				"ead": str(p.ead),
-				"segment_expected_loss": str(p.pd * p.lgd * p.ead),
-			}
-			for p in points
-		],
+				"segment_expected_loss": str(p.pd * p.lgd * p.ead)
 	}
+			for p in points
+		]}
 	if scenario:
 		sc = StressScenario(
 			name=str(scenario.get("name") or "STRESS"),
@@ -76,8 +75,8 @@ def evaluate_portfolio_expected_loss(exposures: list[dict], scenario: dict | Non
 				"pd": str(p.pd),
 				"lgd": str(p.lgd),
 				"ead": str(p.ead),
-				"segment_expected_loss": str(p.pd * p.lgd * p.ead),
-			}
+				"segment_expected_loss": str(p.pd * p.lgd * p.ead)
+	}
 			for p in stressed_points
 		]
 	provisions = calculate_ifrs9_provisions(
@@ -93,8 +92,8 @@ def evaluate_portfolio_expected_loss(exposures: list[dict], scenario: dict | Non
 			"segment": p.segment,
 			"stage": p.stage,
 			"provision_rate": str(p.provision_rate),
-			"provision_amount": str(p.provision_amount),
-		}
+			"provision_amount": str(p.provision_amount)
+	}
 		for p in provisions
 	]
 	out["total_provision_amount"] = str(sum((p.provision_amount for p in provisions), Decimal("0")))
@@ -132,8 +131,7 @@ def _build_ecl_bridge(opening: list[dict], closing: list[dict]) -> dict:
 		"attribution": {
 			"new_and_defaults": str(new_orig + closed),
 			"stage_transfers": str(stage_xfer),
-			"parameter_rollover": str(other),
-		},
+			"parameter_rollover": str(other)}
 	}
 
 
@@ -162,11 +160,11 @@ def persist_credit_risk_ecl_movement(
 			"opening_total_ecl": bridge["opening_total_ecl"],
 			"closing_total_ecl": bridge["closing_total_ecl"],
 			"net_movement": bridge["net_movement"],
-			"bridge_json": json.dumps(bridge, sort_keys=True),
-		}
+			"bridge_json": json.dumps(bridge, sort_keys=True)}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "bridge": bridge}
+	return {"name": doc.name, "bridge": bridge
+	}
 
 
 @frappe.whitelist()
@@ -189,7 +187,8 @@ def register_credit_risk_backtest_dataset(
 	doc.champion_model_version = champion_model_version
 	doc.challenger_model_version = challenger_model_version
 	doc.save(ignore_permissions=True)
-	return {"dataset_code": dataset_code, "name": doc.name}
+	return {"dataset_code": dataset_code, "name": doc.name
+	}
 
 
 @frappe.whitelist()
@@ -203,7 +202,8 @@ def submit_challenger_model_promotion(dataset_code: str) -> dict:
 	doc.promotion_approved_by = None
 	doc.promotion_approved_on = None
 	doc.save(ignore_permissions=True)
-	return {"dataset_code": dataset_code, "workflow_status": doc.workflow_status}
+	return {"dataset_code": dataset_code, "workflow_status": doc.workflow_status
+	}
 
 
 @frappe.whitelist()
@@ -219,7 +219,8 @@ def approve_challenger_model_promotion(dataset_code: str) -> dict:
 	doc.promotion_approved_by = frappe.session.user
 	doc.promotion_approved_on = now_datetime()
 	doc.save(ignore_permissions=True)
-	return {"dataset_code": dataset_code, "workflow_status": doc.workflow_status}
+	return {"dataset_code": dataset_code, "workflow_status": doc.workflow_status
+	}
 
 
 @frappe.whitelist()
@@ -242,11 +243,12 @@ def persist_credit_risk_calibration_run(
 			"lgd_term_json": lgd_term_json,
 			"ead_term_json": ead_term_json,
 			"calibration_method": calibration_method,
-			"status": "COMPLETED",
-		}
+			"status": "COMPLETED"
+	}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "segment": segment}
+	return {"name": doc.name, "segment": segment
+	}
 
 
 @frappe.whitelist()
@@ -309,11 +311,10 @@ def evaluate_account_level_risk(
 				"provision_rate": str(r.provision_rate),
 				"provision_amount": str(r.provision_amount),
 				"country_code": r.country_code,
-				"product_code": r.product_code,
-			}
-			for r in results
-		],
+				"product_code": r.product_code
 	}
+			for r in results
+		]}
 	if stress_scenarios:
 		out["stress_testing"] = _run_account_stress_testing(points=points, stress_scenarios=stress_scenarios)
 	return out
@@ -341,7 +342,7 @@ def run_pd_model_backtesting(points: list[dict]) -> dict:
 		"average_predicted_pd": str(val.average_predicted_pd),
 		"brier_score": str(val.brier_score),
 		"accuracy_band": val.accuracy_band,
-		"threshold_breaches": _threshold_breaches(val),
+		"threshold_breaches": _threshold_breaches(val)
 	}
 
 
@@ -349,7 +350,8 @@ def run_pd_model_backtesting(points: list[dict]) -> dict:
 def persist_portfolio_stress_run(run_name: str, valuation_date: str | None, exposures: list[dict], stress_scenarios: list[dict]) -> dict:
 	base = evaluate_account_level_risk(exposures=exposures)
 	stress = evaluate_account_level_risk(exposures=exposures, stress_scenarios=stress_scenarios)
-	payload = {"exposures": exposures, "stress_scenarios": stress_scenarios}
+	payload = {"exposures": exposures, "stress_scenarios": stress_scenarios
+	}
 	input_hash = hashlib.sha256(json.dumps(payload, sort_keys=True, default=str).encode("utf-8")).hexdigest()
 	doc = frappe.get_doc(
 		{
@@ -362,11 +364,11 @@ def persist_portfolio_stress_run(run_name: str, valuation_date: str | None, expo
 			"stressed_total_ecl": stress.get("stress_testing", [{}])[-1].get("total_ecl"),
 			"base_total_provision": base["portfolio_view"]["total_provision"],
 			"stressed_total_provision": stress.get("stress_testing", [{}])[-1].get("total_provision"),
-			"result_json": json.dumps(stress, sort_keys=True, default=str),
-		}
+			"result_json": json.dumps(stress, sort_keys=True, default=str)}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "run_name": run_name}
+	return {"name": doc.name, "run_name": run_name
+	}
 
 
 @frappe.whitelist()
@@ -383,11 +385,11 @@ def persist_model_validation_run(model_name: str, dataset_ref: str, points: list
 			"average_predicted_pd": result["average_predicted_pd"],
 			"brier_score": result["brier_score"],
 			"accuracy_band": result["accuracy_band"],
-			"threshold_breaches_json": json.dumps(result["threshold_breaches"], sort_keys=True),
-		}
+			"threshold_breaches_json": json.dumps(result["threshold_breaches"], sort_keys=True)}
 	)
 	doc.insert(ignore_permissions=True)
-	return {"name": doc.name, "model_name": model_name}
+	return {"name": doc.name, "model_name": model_name
+	}
 
 
 @frappe.whitelist()
@@ -412,8 +414,8 @@ def integrate_credit_decisions(decisions: list[dict], snapshot_date: str | None 
 				"ead": str(ead),
 				"country_code": str(d.get("country_code") or "INTL"),
 				"product_code": str(d.get("product_code") or "GENERIC"),
-				"default_flag": False,
-			}
+				"default_flag": False
+	}
 		)
 	result = evaluate_account_level_risk(exposures=exposures, overlay=macro_overlay)
 	persisted = 0
@@ -432,14 +434,14 @@ def integrate_credit_decisions(decisions: list[dict], snapshot_date: str | None 
 				"ead": row["ead"],
 				"ecl": row["ecl"],
 				"provision_rate": row["provision_rate"],
-				"provision_amount": row["provision_amount"],
-			}
+				"provision_amount": row["provision_amount"]
+	}
 		)
 		doc.insert(ignore_permissions=True)
 		persisted += 1
 	return {
 		"persisted_snapshots": persisted,
-		"portfolio_view": result["portfolio_view"],
+		"portfolio_view": result["portfolio_view"]
 	}
 
 
@@ -506,8 +508,7 @@ def get_regulatory_dashboard() -> dict:
 		"standards": std.get("standards", []),
 		"activity_controls": std.get("activity_controls", []),
 		"governance": gov,
-		"compliance_score": _compute_compliance_score(std=std, gov=gov),
-	}
+		"compliance_score": _compute_compliance_score(std=std, gov=gov)}
 
 
 @frappe.whitelist()
@@ -528,7 +529,8 @@ def get_regulatory_reporting_pack(as_of_date: str | None = None) -> dict:
 		group by ifrs9_stage
 		order by ifrs9_stage
 		""",
-		{"as_of_date": as_of_date},
+		{"as_of_date": as_of_date
+	},
 		as_dict=True,
 	)
 	stress_rows = frappe.get_all(
@@ -547,7 +549,7 @@ def get_regulatory_reporting_pack(as_of_date: str | None = None) -> dict:
 		"as_of_date": as_of_date,
 		"ifrs9_stage_mix": stage_rows,
 		"stress_runs": stress_rows,
-		"model_validations": validation_rows,
+		"model_validations": validation_rows
 	}
 
 
@@ -588,10 +590,12 @@ def _run_account_stress_testing(points: list[AccountExposurePoint], stress_scena
 def _threshold_breaches(val) -> list[dict]:
 	breaches = []
 	if val.brier_score > Decimal("0.20"):
-		breaches.append({"metric": "brier_score", "severity": "HIGH", "message": "Brier score above model threshold"})
+		breaches.append({"metric": "brier_score", "severity": "HIGH", "message": "Brier score above model threshold"
+	})
 	pd_gap = abs(val.average_predicted_pd - val.observed_default_rate)
 	if pd_gap > Decimal("0.05"):
-		breaches.append({"metric": "pd_calibration_gap", "severity": "MEDIUM", "message": "Predicted PD deviates from observed default rate"})
+		breaches.append({"metric": "pd_calibration_gap", "severity": "MEDIUM", "message": "Predicted PD deviates from observed default rate"
+	})
 	return breaches
 
 
