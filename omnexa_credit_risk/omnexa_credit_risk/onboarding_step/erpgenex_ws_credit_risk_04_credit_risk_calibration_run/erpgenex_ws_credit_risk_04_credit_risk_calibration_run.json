@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create",
+ "creation": "2026-04-20 00:31:40.316268",
+ "description": "Create or review your first **Credit Risk Calibration Run** record from this workspace.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-04-22 16:43:23.942396",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-credit_risk-04-credit_risk_calibration_run",
+ "owner": "Administrator",
+ "reference_document": "Credit Risk Calibration Run",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Get started with Credit Risk Calibration Run",
+ "validate_action": 1
+}

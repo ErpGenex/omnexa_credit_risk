@@ -1,0 +1,145 @@
+Account ID,حساب معرف
+Account Snapshots,حساب Snapshots
+Accuracy Band,Accuracy Band
+Actor,Actor
+Address,العنوان
+Amended From,Amended From
+App,App
+Approved,معتمد
+Approved At,معتمد At
+Audit Reference,تدقيق Reference
+Audit Snapshots,تدقيق Snapshots
+Average Predicted PD,Average Predicted PD
+Backtest Datasets,Backtest Datasets
+Bank Account,بنك حساب
+Base Total ECL,Base إجمالي ECL
+Base Total Provision,Base إجمالي Provision
+Bridge JSON,Bridge JSON
+Brier Score,Brier درجة
+Calibration Method,Calibration Method
+Calibration methods Perc,Calibration methods Perc
+Calibration Runs,Calibration Runs
+Challenger Model Version,Challenger Model إصدار
+Challenger promotion is not pending,Challenger promotion is not معلق
+Champion Model Version,Champion Model إصدار
+Checker,Checker
+Checker must differ from maker,Checker must differ from maker
+Closing Total ECL,Closing إجمالي ECL
+Contact,جهة الاتصال
+"Contracting, Disbursement & Servicing","Contracting, Disbursement & Servicing"
+Cost Center,مركز التكلفة
+Country Code,Country كود
+Created At,Created At
+Credit Risk,ائتمان مخاطر
+Credit Risk Account Snap Vol,ائتمان مخاطر حساب Snap Vol
+Credit Risk Account Snapshot,ائتمان مخاطر حساب لقطة
+Credit Risk Account Snapshot Trend,ائتمان مخاطر حساب لقطة اتجاه
+Credit Risk Audit Snapshot,ائتمان مخاطر تدقيق لقطة
+Credit Risk Backtest Dataset,ائتمان مخاطر Backtest Dataset
+Credit Risk Calibration Mix,ائتمان مخاطر Calibration Mix
+Credit Risk Calibration Run,ائتمان مخاطر Calibration Run
+Credit Risk ECL Movement,ائتمان مخاطر ECL Movement
+Credit Risk Governance,ائتمان مخاطر حوكمة
+Credit Risk Model Validation Run,ائتمان مخاطر Model تحقق Run
+Credit Risk Policy Versi Mix,ائتمان مخاطر سياسة Versi Mix
+Credit Risk Policy Version,ائتمان مخاطر سياسة إصدار
+Credit Risk Portfolio Stress Run,ائتمان مخاطر Portfolio Stress Run
+Credit Risk Portfolio Stress Trend,ائتمان مخاطر Portfolio Stress اتجاه
+Currency Exchange Rate,Currency Exchange معدل
+Customer & KYC,العميل والتحقق من الهوية (KYC)
+Customer Profile,ملف العميل
+Dataset Code,Dataset كود
+Dataset Owner,Dataset Owner
+Dataset Ref,Dataset Ref
+Details,التفاصيل
+EAD,EAD
+EAD Term Structure JSON,EAD Term Structure JSON
+ECL,ECL
+ECL Movements,ECL Movements
+ECL stage bars Bar,ECL stage bars Bar
+Effective From,Effective From
+Fiscal Year,Fiscal Year
+General Ledger,عام دفتر أستاذ
+Governance,حوكمة
+Governance Overview,حوكمة نظرة عامة
+Horizon (Months),Horizon (Months)
+IFRS9 & Stress Analytics,IFRS9 & Stress تحليلات
+IFRS9 Stage,IFRS9 Stage
+Input Hash,Input Hash
+Inputs JSON,Inputs JSON
+inputs/outputs must be JSON objects,inputs outputs must be JSON objects
+Journal Entry,قيد يومية
+LGD,LGD
+LGD Term Structure JSON,LGD Term Structure JSON
+Maker,Maker
+Maker and checker must be different users.,Maker و checker must be different users.
+Manifest JSON,Manifest JSON
+Mode of Payment,طريقة الدفع
+Model Name,Model اسم
+Model Validations,Model Validations
+Movement Reference,Movement Reference
+Net Movement,Net Movement
+Notes,Notes
+Observed Default Rate,Observed افتراضي معدل
+Omnexa Credit Risk,Omnexa ائتمان مخاطر
+Opening Total ECL,Opening إجمالي ECL
+Origination & Product Setup,Origination & منتج إعداد
+Outputs JSON,Outputs JSON
+Overview,نظرة عامة
+Payload JSON,Payload JSON
+payload must be a JSON object,payload must be a JSON object
+Payment Entry,دفعة قيد
+PD,PD
+PD Term Structure JSON,PD Term Structure JSON
+Pending,قيد الانتظار
+Period End,Period نهاية
+Period Label,Period Label
+Period Start,Period بداية
+Policies Total,Policies إجمالي
+Policy Name,سياسة اسم
+Policy Ref,سياسة Ref
+Policy Reference,سياسة Reference
+Policy Version,سياسة إصدار
+Policy version already exists.,سياسة إصدار already exists.
+Policy version not found.,سياسة إصدار not found.
+Policy Versions,سياسة Versions
+Process Name,Process اسم
+Product Code,منتج كود
+Promotion Approved By,Promotion معتمد حسب
+Promotion Approved On,Promotion معتمد On
+Promotion Submitted By,Promotion Submitted حسب
+Promotion Submitted On,Promotion Submitted On
+Provision Amount,Provision مبلغ
+Provision Rate,Provision معدل
+Rejected,مرفوض
+Rejected At,مرفوض At
+Rejection Reason,Rejection Reason
+Rejector,Rejector
+Result JSON,Result JSON
+"Risk, Governance & Compliance","مخاطر, حوكمة & امتثال"
+Run Name,Run اسم
+Run Reference,Run Reference
+Sales Invoice,فاتورة بيع
+Scenario Payload,Scenario Payload
+Scenario Reference,Scenario Reference
+Segment,Segment
+Segments Pie,Segments Pie
+Snapshot Date,لقطة تاريخ
+Snapshot Hash,لقطة Hash
+Snapshot Reference,لقطة Reference
+Source Decision Case,Source قرار حالة
+Source Decision DocType,Source قرار Doc نوع
+Status,الحالة
+Status Bar,حالة Bar
+Stress Runs,Stress Runs
+Stressed Total ECL,Stressed إجمالي ECL
+Stressed Total Provision,Stressed إجمالي Provision
+Threshold Breaches JSON,Threshold Breaches JSON
+Title,العنوان
+Total Accounts,إجمالي حسابات
+Trial Balance,Trial رصيد
+Validation Date,تحقق تاريخ
+Validation Owner,تحقق Owner
+Valuation Date,Valuation تاريخ
+Workflow Status,سير العمل حالة
+You do not have checker approval role.,You do not have checker موافقة دور.
